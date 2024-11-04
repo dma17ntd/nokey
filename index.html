@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đọc IP Người Dùng</title>
+    <style>
+        body{font-family:Arial,sans-serif;background-image:url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/7ba60889-62e3-480b-b1a4-3b7f949fe0cb/df8khey-c73cfcfd-3608-459a-9442-886c5079cce1.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzdiYTYwODg5LTYyZTMtNDgwYi1iMWE0LTNiN2Y5NDlmZTBjYlwvZGY4a2hleS1jNzNjZmNmZC0zNjA4LTQ1OWEtOTQ0Mi04ODZjNTA3OWNjZTEuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.iodwmeFDqu6MnLPZYUH8nw-qGBZwBRLggUrUCdAfqmU');background-size:cover;background-position:center;text-align:center;padding:50px;color:cyan;}
+    </style>
+    <script>
+        window.onload=function(){fetchIP();};
+        async function fetchIP(){try{const res=await fetch('https://api.ipify.org?format=json');const data=await res.json();document.getElementById('ip-display').textContent=` ${data.ip}`;}catch(e){document.getElementById('ip-display').textContent='Không thể lấy được địa chỉ IP.';console.error('Error:',e);}}
+    </script>
+</head>
+<body>
+    <div>
+        <h2> Địa chỉ IP của bạn 🪪</h2>
+        <p id="ip-display">Đang tải địa chỉ IP của bạn...</p>
+
+    </div>
+    <footer>
+        &copy2024 | Copyright by White Nn🔰
+        <h5>★ Copyright&copy / Registered&reg / Trademark™ ★</h5>
+        <h6>&copy𝟮𝟬𝟮𝟰 | MinhAnh🐰 | White Nn🔰 | VietNam🇻🇳</h6>
+    </footer>
+</body>
+</html>
